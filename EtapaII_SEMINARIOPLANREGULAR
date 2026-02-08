@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Seminario 2026 - Etapa II - Escolaris</title>
+    <style>
+        :root {
+            --naranja: #db6015;
+            --amarillo: #f7be00;
+            --azul-oscuro: #244b5a;
+            --rojo-ladrillo: #993921;
+            --fondo-azul: #f0f8ff;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--fondo-azul);
+            color: var(--azul-oscuro);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(36, 75, 90, 0.1);
+            border-top: 10px solid var(--naranja);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--fondo-azul) 100%);
+            border-radius: 8px;
+        }
+
+        .logo {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: var(--azul-oscuro);
+            margin: 0;
+        }
+
+        .logo span { color: var(--naranja); }
+
+        .subtitle {
+            color: var(--rojo-ladrillo);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        /* Sección de Ejes Temáticos */
+        .ejes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .eje-card {
+            background: var(--azul-oscuro);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid var(--amarillo);
+        }
+
+        .eje-number {
+            position: absolute;
+            top: -10px;
+            right: 0;
+            font-size: 4em;
+            color: rgba(255,255,255,0.1);
+            font-weight: 900;
+        }
+
+        h2 {
+            color: var(--azul-oscuro);
+            border-left: 5px solid var(--naranja);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        /* Tabla de Cronograma */
+        .table-scroll { overflow-x: auto; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            min-width: 700px;
+        }
+
+        th {
+            background-color: var(--azul-oscuro);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.8em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+        }
+
+        .mes-badge { font-weight: bold; color: var(--rojo-ladrillo); }
+        
+        .role-pill {
+            display: inline-block;
+            background: var(--fondo-azul);
+            color: var(--azul-oscuro);
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
+            border: 1px solid var(--amarillo);
+            margin: 2px;
+        }
+
+        .holiday {
+            background-color: #fff9f0 !important;
+            text-align: center;
+            font-weight: bold;
+            color: var(--rojo-ladrillo);
+            border: 2px dashed var(--rojo-ladrillo);
+        }
+
+        /* Grid de Roles */
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .role-box {
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            border-left: 4px solid var(--naranja);
+        }
+
+        .role-box strong { color: var(--naranja); display: block; margin-bottom: 5px; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">ESCOLARIS<span>.</span></div>
+        <div class="subtitle">Seminario 2026 - Etapa II: Proyecto de Nación</div>
+        <p><strong>Tema General:</strong> Ciudadanía | <strong>Tema Eje:</strong> Derechos Humanos</p>
+    </header>
+
+    <h2>🎯 Ámbitos de Investigación (Ejes Temáticos)</h2>
+    <div class="ejes-container">
+        <div class="eje-card">
+            <div class="eje-number">1</div>
+            La ciudadanía como herramienta para el goce de los derechos humanos.
+        </div>
+        <div class="eje-card">
+            <div class="eje-number">2</div>
+            El impacto de la corrupción en los derechos económicos, sociales y culturales.
+        </div>
+        <div class="eje-card">
+            <div class="eje-number">3</div>
+            La prevención de la violencia como medio para la protección de los derechos humanos.
+        </div>
+        <div class="eje-card">
+            <div class="eje-number">4</div>
+            El papel de la educación financiera en la protección de los derechos económicos.
+        </div>
+    </div>
+
+    <h2>📅 Cronograma de Entregas Individuales</h2>
+    <div class="table-scroll">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mes</th>
+                    <th>Semana</th>
+                    <th>Responsable del Rol</th>
+                    <th>Entregable Individual</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="mes-badge">MARZO</td>
+                    <td>Semana 1</td>
+                    <td><span class="role-pill">Coordinador</span></td>
+                    <td>Creación de documento compartido y gestión de accesos.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Semana 2</td>
+                    <td><span class="role-pill">Investigador</span></td>
+                    <td>Ficha técnica: Generaciones de DDHH aplicada al tema.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Semana 3</td>
+                    <td><span class="role-pill">Visionario / Secretario</span></td>
+                    <td>Redacción de la "Visión de Nación" y "Justificación".</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Semana 4</td>
+                    <td><span class="role-pill">Planificador / Investigador</span></td>
+                    <td>Planteamiento de Objetivos y Marco Conceptual (borrador).</td>
+                </tr>
+                <tr class="holiday">
+                    <td colspan="4">☀️ RECESO DE SEMANA SANTA (30 DE MARZO AL 03 DE ABRIL) ☀️</td>
+                </tr>
+                <tr>
+                    <td class="mes-badge">ABRIL</td>
+                    <td>Semana 5</td>
+                    <td><span class="role-pill">Secretario / Editor</span></td>
+                    <td>Redacción de Introducción y Estructura (Portada/Índice).</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Semana 6</td>
+                    <td><span class="role-pill">Estratega / Planificador</span></td>
+                    <td>Metas (Corto, Mediano y Largo Plazo) y Plan de Acción.</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Semana 7</td>
+                    <td><span class="role-pill">Analista / Editor</span></td>
+                    <td>Conclusiones, Recomendaciones y limpieza APA.</td>
+                </tr>
+                <tr>
+                    <td class="mes-badge">MAYO</td>
+                    <td>Semana 8</td>
+                    <td><span class="role-pill">EQUIPO COMPLETO</span></td>
+                    <td>Entrega final unificada y Video de defensa individual.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>👥 Definición de Responsabilidades</h2>
+    <div class="roles-grid">
+        <div class="role-box"><strong>1. Coordinador</strong>Lidera la comunicación y asegura que todos suban su parte al archivo.</div>
+        <div class="role-box"><strong>2. Investigador</strong>Busca fuentes fidedignas y redacta el sustento teórico del tema.</div>
+        <div class="role-box"><strong>3. Visionario</strong>Redacta cómo el grupo sueña ver a Guatemala en el futuro.</div>
+        <div class="role-box"><strong>4. Secretario</strong>Redacta la introducción y explica por qué el tema es importante.</div>
+        <div class="role-box"><strong>5. Planificador</strong>Define qué pasos se seguirán y crea el cronograma de actividades.</div>
+        <div class="role-box"><strong>6. Estratega</strong>Crea metas que se puedan medir (SMART) para el proyecto.</div>
+        <div class="role-box"><strong>7. Analista de Cierre</strong>Redacta qué aprendieron y qué sugieren para mejorar el país.</div>
+        <div class="role-box"><strong>8. Editor Digital</strong>Aplica el formato APA, revisa ortografía y unifica el diseño.</div>
+    </div>
+
+    <footer style="margin-top: 40px; text-align: center; font-size: 0.8em; color: #777;">
+        © 2026 Colegio Escolaris | Guía Basada en el Documento Oficial MINEDUC 2025
+    </footer>
+</div>
+
+</body>
+</html>
