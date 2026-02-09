@@ -89,6 +89,7 @@
             color: var(--azul-oscuro);
             border-left: 5px solid var(--naranja);
             padding-left: 15px;
+            margin-top: 40px;
             margin-bottom: 20px;
             font-size: 1.5em;
         }
@@ -99,7 +100,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 30px;
-            min-width: 700px;
+            min-width: 800px;
         }
 
         th {
@@ -107,28 +108,49 @@
             color: white;
             padding: 15px;
             text-align: left;
-            font-size: 0.8em;
+            font-size: 0.85em;
             text-transform: uppercase;
         }
 
         td {
             padding: 15px;
             border-bottom: 1px solid #eee;
-            font-size: 0.95em;
+            font-size: 0.9em;
+            vertical-align: middle;
         }
 
-        .mes-badge { font-weight: bold; color: var(--rojo-ladrillo); }
+        .week-header {
+            background-color: #eef4f8;
+            font-weight: bold;
+            color: var(--azul-oscuro);
+            text-align: center;
+        }
+
+        .mes-badge { font-weight: bold; color: var(--rojo-ladrillo); width: 100px; }
         
         .role-pill {
             display: inline-block;
-            background: var(--fondo-azul);
+            background: var(--blanco);
             color: var(--azul-oscuro);
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.8em;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
             font-weight: bold;
-            border: 1px solid var(--amarillo);
-            margin: 2px;
+            border: 2px solid var(--amarillo);
+            min-width: 140px;
+            text-align: center;
+        }
+
+        .admin-pill {
+            background: var(--naranja);
+            color: white;
+            border: none;
+        }
+
+        .all-pill {
+            background: var(--azul-oscuro);
+            color: white;
+            border: none;
         }
 
         .holiday {
@@ -137,6 +159,21 @@
             font-weight: bold;
             color: var(--rojo-ladrillo);
             border: 2px dashed var(--rojo-ladrillo);
+        }
+
+        .structure-list {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            column-count: 2;
+            list-style-position: inside;
+        }
+
+        .structure-list li {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: var(--azul-oscuro);
         }
 
         .roles-grid {
@@ -150,13 +187,20 @@
             border: 1px solid #eee;
             border-radius: 8px;
             border-left: 4px solid var(--naranja);
+            background: #fff;
         }
 
         .role-box strong { color: var(--naranja); display: block; margin-bottom: 5px; }
 
+        .highlight-text {
+            color: var(--azul-oscuro);
+            font-weight: bold;
+        }
+
         @media print {
             body { background: white; padding: 0; }
             .container { box-shadow: none; border: none; }
+            .structure-list { column-count: 1; }
         }
     </style>
 </head>
@@ -169,103 +213,163 @@
         <p><strong>Tema General:</strong> Ciudadanía | <strong>Tema Eje:</strong> Derechos Humanos</p>
     </header>
 
-    <h2>🎯 Ámbitos de Investigación (Ejes Temáticos)</h2>
+    <h2>🎯 Ámbitos de Investigación</h2>
     <div class="ejes-container">
-        <div class="eje-card">
-            <div class="eje-number">1</div>
-            La ciudadanía como herramienta para el goce de los derechos humanos.
-        </div>
-        <div class="eje-card">
-            <div class="eje-number">2</div>
-            El impacto de la corrupción en los derechos económicos, sociales y culturales.
-        </div>
-        <div class="eje-card">
-            <div class="eje-number">3</div>
-            La prevención de la violencia como medio para la protección de los derechos humanos.
-        </div>
-        <div class="eje-card">
-            <div class="eje-number">4</div>
-            El papel de la educación financiera en la protección de los derechos económicos.
-        </div>
+        <div class="eje-card"><div class="eje-number">1</div>La ciudadanía como herramienta para el goce de los derechos humanos.</div>
+        <div class="eje-card"><div class="eje-number">2</div>El impacto de la corrupción en los derechos económicos, sociales y culturales.</div>
+        <div class="eje-card"><div class="eje-number">3</div>La prevención de la violencia como medio para la protección de los derechos humanos.</div>
+        <div class="eje-card"><div class="eje-number">4</div>El papel de la educación financiera en la protección de los derechos económicos.</div>
     </div>
 
-    <h2>📅 Cronograma de Entregas Individuales</h2>
+    <h2>📅 Cronograma Semanal de Entregas</h2>
     <div class="table-scroll">
         <table>
             <thead>
                 <tr>
                     <th>Mes</th>
                     <th>Semana</th>
-                    <th>Responsable del Rol</th>
-                    <th>Entregable Individual (Tu pieza)</th>
+                    <th>Responsable</th>
+                    <th>Acción y Entregable Específico</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- SEMANA 1 -->
                 <tr>
-                    <td class="mes-badge">MARZO</td>
+                    <td rowspan="2" class="mes-badge">MARZO</td>
+                    <td class="week-header" colspan="3">ORGANIZACIÓN</td>
+                </tr>
+                <tr>
                     <td>Semana 1</td>
-                    <td><span class="role-pill">Coordinador</span></td>
-                    <td>Creación de documento compartido y gestión de accesos.</td>
+                    <td><span class="role-pill admin-pill">Docente</span></td>
+                    <td>Conformación de equipos y asignación de temas de investigación.</td>
+                </tr>
+
+                <!-- SEMANA 2 -->
+                <tr>
+                    <td rowspan="3"></td>
+                    <td class="week-header" colspan="3">BASES DEL PROYECTO</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Semana 2</td>
+                    <td rowspan="2">Semana 2</td>
                     <td><span class="role-pill">Investigador</span></td>
-                    <td>Ficha técnica: Generaciones de DDHH aplicada al tema elegido.</td>
+                    <td>Redacción de la <span class="highlight-text">Definición de Derechos Humanos</span>.</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><span class="role-pill">Visionario</span></td>
+                    <td>Redacción de la <span class="highlight-text">Visión del Proyecto de Nación</span>.</td>
+                </tr>
+
+                <!-- SEMANA 3 -->
+                <tr>
+                    <td rowspan="2"></td>
+                    <td class="week-header" colspan="3">JUSTIFICACIÓN</td>
+                </tr>
+                <tr>
                     <td>Semana 3</td>
-                    <td><span class="role-pill">Visionario / Secretario</span></td>
-                    <td>Redacción de la "Visión de Nación" y "Justificación" técnica.</td>
+                    <td><span class="role-pill">Secretario</span></td>
+                    <td>Redacción de la <span class="highlight-text">Justificación</span> del proyecto.</td>
+                </tr>
+
+                <!-- SEMANA 4 -->
+                <tr>
+                    <td rowspan="2"></td>
+                    <td class="week-header" colspan="3">MARCO CONCEPTUAL</td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td>Semana 4</td>
-                    <td><span class="role-pill">Planificador / Investigador</span></td>
-                    <td>Planteamiento de Objetivos y Marco Conceptual (borrador).</td>
+                    <td><span class="role-pill">Investigador</span></td>
+                    <td>Redacción del <span class="highlight-text">Marco Conceptual</span> técnico.</td>
                 </tr>
+
+                <!-- VACACIONES -->
                 <tr class="holiday">
-                    <td colspan="4">☀️ RECESO DE SEMANA SANTA (30 DE MARZO AL 06 DE ABRIL) ☀️</td>
+                    <td colspan="4">☀️ RECESO DE SEMANA SANTA (30 DE MARZO AL 03 DE ABRIL) ☀️</td>
+                </tr>
+
+                <!-- SEMANA 5 -->
+                <tr>
+                    <td rowspan="3" class="mes-badge">ABRIL</td>
+                    <td class="week-header" colspan="3">OBJETIVOS Y METAS</td>
                 </tr>
                 <tr>
-                    <td class="mes-badge">ABRIL</td>
-                    <td>Semana 5</td>
-                    <td><span class="role-pill">Secretario / Editor</span></td>
-                    <td>Redacción de Introducción y Estructura (Portada/Índice).</td>
+                    <td rowspan="2">Semana 5</td>
+                    <td><span class="role-pill">Planificador</span></td>
+                    <td>Redacción de <span class="highlight-text">Objetivos Generales y Específicos</span>.</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td><span class="role-pill">Estratega</span></td>
+                    <td>Redacción de <span class="highlight-text">Metas</span> (Corto, Mediano y Largo Plazo).</td>
+                </tr>
+
+                <!-- SEMANA 6 -->
+                <tr>
+                    <td rowspan="2"></td>
+                    <td class="week-header" colspan="3">CIERRE DE CONTENIDO</td>
+                </tr>
+                <tr>
                     <td>Semana 6</td>
-                    <td><span class="role-pill">Estratega / Planificador</span></td>
-                    <td>Metas (Corto, Mediano y Largo Plazo) y Plan de Acción.</td>
+                    <td><span class="role-pill">Analista</span></td>
+                    <td>Redacción de <span class="highlight-text">Conclusiones y Recomendaciones</span>.</td>
+                </tr>
+
+                <!-- SEMANA 7 -->
+                <tr>
+                    <td rowspan="2"></td>
+                    <td class="week-header" colspan="3">COMPILACIÓN</td>
                 </tr>
                 <tr>
-                    <td></td>
                     <td>Semana 7</td>
-                    <td><span class="role-pill">Analista / Editor</span></td>
-                    <td>Conclusiones, Recomendaciones y limpieza final bajo Normas APA.</td>
+                    <td><span class="role-pill">Editor Digital</span></td>
+                    <td>Compilación de <span class="highlight-text">Referencias Bibliográficas y Anexos</span>.</td>
+                </tr>
+
+                <!-- SEMANA 8 -->
+                <tr>
+                    <td rowspan="4" class="mes-badge">MAYO</td>
+                    <td class="week-header" colspan="3">ENTREGA FINAL</td>
                 </tr>
                 <tr>
-                    <td class="mes-badge">MAYO</td>
-                    <td>Semana 8</td>
-                    <td><span class="role-pill">EQUIPO COMPLETO</span></td>
-                    <td>Entrega final unificada y Video de defensa individual.</td>
+                    <td rowspan="3">Semana 8</td>
+                    <td><span class="role-pill">Coordinador</span></td>
+                    <td>Armado de <span class="highlight-text">Portada, Índice</span> y ordenamiento de archivos finales para el equipo.</td>
+                </tr>
+                <tr>
+                    <td><span class="role-pill all-pill">Todos</span></td>
+                    <td>Subida del <span class="highlight-text">Informe Final</span> a la plataforma (debe ser idéntico).</td>
+                </tr>
+                <tr>
+                    <td><span class="role-pill all-pill">Todos</span></td>
+                    <td>Entrega del <span class="highlight-text">Borrador del Plan de Acción Individual</span> para Etapa III.</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>👥 Definición de Responsabilidades</h2>
+    <h2>📋 Orden Oficial del Informe Final</h2>
+    <ol class="structure-list">
+        <li>Portada</li>
+        <li>Índice</li>
+        <li>Introducción</li>
+        <li>Definición de Derechos Humanos</li>
+        <li>Visión de Nación</li>
+        <li>Objetivos Generales y Específicos</li>
+        <li>Justificación</li>
+        <li>Marco Conceptual</li>
+        <li>Metas (Corto, Mediano y Largo Plazo)</li>
+        <li>Conclusiones y Recomendaciones</li>
+        <li>Bibliografía y Anexos</li>
+    </ol>
+
+    <h2>👥 Roles de Integrantes</h2>
     <div class="roles-grid">
-        <div class="role-box"><strong>1. Coordinador</strong>Lidera la comunicación y asegura que todos integren su parte al archivo.</div>
-        <div class="role-box"><strong>2. Investigador</strong>Busca fuentes fidedignas y redacta el sustento teórico del ámbito.</div>
-        <div class="role-box"><strong>3. Visionario</strong>Redacta cómo el grupo aspira ver a Guatemala en el futuro.</div>
-        <div class="role-box"><strong>4. Secretario</strong>Redacta la introducción y explica la importancia del tema elegido.</div>
-        <div class="role-box"><strong>5. Planificador</strong>Define los pasos lógicos y crea el cuadro de actividades del proyecto.</div>
-        <div class="role-box"><strong>6. Estratega</strong>Define las metas medibles y alcanzables (SMART) del informe.</div>
-        <div class="role-box"><strong>7. Analista de Cierre</strong>Extrae las lecciones aprendidas y redacta las recomendaciones.</div>
-        <div class="role-box"><strong>8. Editor Digital</strong>Asegura la estética final, ortografía y normativa APA en el informe.</div>
+        <div class="role-box"><strong>1. Coordinador</strong>Arma y ordena todo el contenido recopilado para entregar el informe final a sus compañeros.</div>
+        <div class="role-box"><strong>2. Investigador</strong>Redacta la definición de DDHH y el marco conceptual del proyecto.</div>
+        <div class="role-box"><strong>3. Visionario</strong>Redacta la visión futura del proyecto de nación.</div>
+        <div class="role-box"><strong>4. Secretario</strong>Redacta la justificación y la introducción del informe.</div>
+        <div class="role-box"><strong>5. Planificador</strong>Define los objetivos generales y específicos de la investigación.</div>
+        <div class="role-box"><strong>6. Estratega</strong>Redacta las metas cuantificables a corto, mediano y largo plazo.</div>
+        <div class="role-box"><strong>7. Analista de Cierre</strong>Redacta los hallazgos finales (conclusiones) y las propuestas (recomendaciones).</div>
+        <div class="role-box"><strong>8. Editor Digital</strong>Compila las referencias bibliográficas, anexos y aplica el formato APA.</div>
     </div>
 
     <footer style="margin-top: 40px; text-align: center; font-size: 0.8em; color: #777;">
