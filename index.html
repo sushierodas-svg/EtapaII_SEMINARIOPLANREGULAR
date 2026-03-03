@@ -197,6 +197,18 @@
             font-weight: bold;
         }
 
+        /* Estilos nuevos para la nota de equipos */
+        .nota-equipo {
+            background-color: #fff9f0;
+            border-left: 5px solid var(--amarillo);
+            padding: 15px;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            color: var(--azul-oscuro);
+            font-size: 0.95em;
+        }
+
         @media print {
             body { background: white; padding: 0; }
             .container { box-shadow: none; border: none; }
@@ -360,10 +372,45 @@
         <li>Bibliografía y Anexos</li>
     </ol>
 
+    <!-- NUEVA SECCIÓN DE DISTRIBUCIÓN -->
+    <h2>📊 Distribución de Equipos (50 Estudiantes)</h2>
+    <div class="table-scroll">
+        <table>
+            <thead>
+                <tr>
+                    <th style="background-color: var(--naranja);">No. de Equipo</th>
+                    <th style="background-color: var(--naranja);">Integrantes</th>
+                    <th style="background-color: var(--naranja);">Distribución de Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: bold;">Equipos 1 al 4</td>
+                    <td>8 alumnos</td>
+                    <td>Un integrante por cada rol (del 1 al 8).</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                    <td style="font-weight: bold;">Equipos 5 y 6</td>
+                    <td>9 alumnos</td>
+                    <td>Roles del 1 al 8 + <strong style="color: var(--naranja);">1 Investigador de apoyo</strong>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="nota-equipo">
+        <strong>📌 Nota para Equipos de 9:</strong> En estos grupos, el <strong>Rol 2 (Investigador)</strong> será desempeñado por <strong>dos personas</strong>. Ambos deben colaborar activamente en la redacción de la definición de DDHH y el marco conceptual para asegurar la calidad del informe.
+    </div>
+    <!-- FIN NUEVA SECCIÓN -->
+
     <h2>👥 Roles de Integrantes</h2>
     <div class="roles-grid">
         <div class="role-box"><strong>1. Coordinador</strong>Arma y ordena todo el contenido recopilado para entregar el informe final a sus compañeros.</div>
-        <div class="role-box"><strong>2. Investigador</strong>Redacta la definición de DDHH y el marco conceptual del proyecto.</div>
+        <div class="role-box">
+            <strong>2. Investigador</strong>
+            Redacta la definición de DDHH y el marco conceptual del proyecto.<br>
+            <span style="font-size: 0.85em; color: #666; display: block; margin-top: 8px;"><em>*En los equipos 5 y 6, dos personas compartirán este rol.</em></span>
+        </div>
         <div class="role-box"><strong>3. Visionario</strong>Redacta la visión futura del proyecto de nación.</div>
         <div class="role-box"><strong>4. Secretario</strong>Redacta la justificación y la introducción del informe.</div>
         <div class="role-box"><strong>5. Planificador</strong>Define los objetivos generales y específicos de la investigación.</div>
